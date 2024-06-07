@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0a0a0a;
+  --secondary-color: #262626;
+  --background-color: #f8fafc;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0a0a0a;
+  }
+  
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+*::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-radius: 0rem;
+  }
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #f1f5f9;
+    border-radius: 1rem;
+    border: 0.1rem solid #0a0a0a;
+  }
+  
+  /* RouterLink */
+.router-link-active {
+    border-width: 1px;
+  }
