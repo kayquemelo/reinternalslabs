@@ -2,6 +2,7 @@ import { Component, ElementRef, NgZone, OnDestroy, OnInit } from '@angular/core'
 import { Observable, Subscription, fromEvent, interval } from 'rxjs';
 import { map, throttleTime } from 'rxjs/operators';
 import { CardPost } from '../../interfaces/card-post';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -30,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private scrollPosition$: Observable<number>;
 
-  constructor(private ngZone: NgZone) {
+  constructor(private ngZone: NgZone, private _router: Router) {
     this.scrollPosition$ = fromEvent(window, 'scroll').pipe(
       throttleTime(100),
       map(() => window.scrollY)
@@ -65,6 +66,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public scrollTopTopPage(): void {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  public navigateToPost(id: string) {
+    return this._router.navigate(['post', id])
   }
 
   ngOnDestroy(): void {
