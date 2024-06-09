@@ -29,7 +29,7 @@ const routes: Routes = [
       },
       {
         path: "author",
-        title: "Autor | Reinternals LABs",
+        title: "Autores | Reinternals LABs",
         component: AuthorComponent
       },
       {

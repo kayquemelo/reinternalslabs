@@ -6,7 +6,7 @@
                 <div (click)="this.navigateToPost(card.id)" class="cursor-pointer text-primary-color flex flex-col w-full bg-background-color text-background-color min-h-48 rounded-md drop-shadow-md border p-4 flex justify-center items-center hover:bg-primary-color hover:text-background-color duration-300">
                     <h1 class="break-words text-2xl text-center">{{card.title}}</h1>
                     <h1 class="break-words text-center">{{card.subtitle}}</h1>
-                    <small class="break-words text-xs text-gray-300">{{card.author}} - {{card.date}}</small>
+                    <small class="break-words text-xs text-gray-300 italic">{{card.author}} - {{card.date}}</small>
                 </div>
             }
         </div>

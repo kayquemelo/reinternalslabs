@@ -1,5 +1,5 @@
 <section #top class="max-w-screen h-[90vh] overflow-hidden" style="background-image: url('{{this.bgImage}}'); background-size: cover; background-repeat: no-repeat; background-position: center">
-    <div class="w-full h-full bg-primary-color opacity-90 flex flex-col justify-center items-center text-center p-8">
+    <div class="w-full h-full backdrop-blur flex flex-col justify-center items-center text-center p-8">
         <h1 class="break-words text-5xl font-semibold text-white">Anotações, Tutoriais,</h1>
         <h1 class="break-words text-5xl font-semibold text-white">Pesquisas, projetos e tudo mais.</h1>
         <br>
@@ -29,15 +29,11 @@
                 <div (click)="this.navigateToPost(card.id)" class="cursor-pointer text-primary-color flex flex-col w-full bg-background-color text-background-color min-h-48 rounded-md drop-shadow-md border p-4 flex justify-center items-center hover:bg-primary-color hover:text-background-color duration-300">
                     <h1 class="break-words text-2xl text-center">{{card.title}}</h1>
                     <h1 class="break-words text-center">{{card.subtitle}}</h1>
-                    <small class="break-words text-xs text-gray-300">{{card.author}} - {{card.date}}</small>
+                    <small class="break-words text-xs text-gray-300 italic">{{card.author}} - {{card.date}}</small>
                 </div>
             }
         </div>
     </div>
 </section>
 
-@if(this.showBackToTopButton) {
-    <div (click)="this.scrollTopTopPage()" class="w-8 h-8 fixed bottom-3 right-3 rounded-full bg-white w-10 h-10 cursor-pointer">
-        <img src="assets/backtop.png" alt="top">
-    </div>
-}
+<app-back-scroll></app-back-scroll>

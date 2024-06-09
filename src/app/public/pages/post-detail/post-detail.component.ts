@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class PostDetailComponent {
 
-  public scrollToDomElementID(element: HTMLElement): void {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-
 }

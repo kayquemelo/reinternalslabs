@@ -1,19 +1,18 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription, interval } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { CardPost } from '../../interfaces/card-post';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription, Observable, interval, map } from 'rxjs';
+import { CardPost } from '../../public/interfaces/card-post';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrl: './main.component.css'
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class MainComponent implements OnInit {
 
   private subscriptions: Subscription = new Subscription();
   
-  public bgImage: string = "assets/ai_lampada_bg.jpg";
+  public bgImage: string = 'assets/bright_bg.jpg';
 
   public readonly bgImageList: Array<string> = [
     'assets/ai_lampada_bg.jpg',
@@ -43,17 +42,5 @@ export class HomeComponent implements OnInit, OnDestroy {
     return interval(5000).pipe(
       map(() => Math.floor(Math.random() * this.bgImageList.length))
     );
-  }
-
-  public scrollToDomElementID(element: HTMLElement): void {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-
-  public navigateToPost(id: string) {
-    return this._router.navigate(['post', id])
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
   }
 }

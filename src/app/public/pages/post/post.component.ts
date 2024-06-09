@@ -20,6 +20,6 @@ export class PostComponent {
 
   public navigateToPost(id: string) {
     return this._router.navigate(['post', id])
-  }
+  };
 
 }

@@ -1,6 +1,11 @@
 <section class="min-h-screen">
-    <div class="px-8 py-4 text-primary-color flex">
-        <div class="w-full xl:px-16 lg:px-16 px-4 max-h-100vh">
+    <div class="px-8 py-4 text-primary-color">
+        <h1 class="break-words text-4xl font-semibold text-center mt-4">SQLite do Zero - part. 1</h1>
+        <p class="text-2xl break-words font-normal text-center">Desenhando a arquitetura</p>
+        <p class="text-sm break-words font-normal italic text-center text-gray-300 hover:text-primary-color duration-300">Kayque melo - 2024-06-02</p>
+    </div>
+    <div class="px-8 py-4 flex flex-row">
+        <div class="w-full xl:px-16 lg:px-16 px-4 text-primary-color">
             <div #section_01 class="my-8">
                 <h1 class="text-3xl mb-2">Apresentação</h1>
                 <br>
@@ -34,12 +39,34 @@
             <div #section_04 class="my-8">
                 <h1 class="text-3xl mb-2">Referências</h1>
                 <br>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                <br>
-                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                <br>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                <ul>
+                    <li>- Ref 001: <a href="" class="hover:underline italic">reference There are many variations of passages of Lorem Ipsum available</a></li>
+                    <li>- Ref 002: <a href="" class="hover:underline italic">reference There are many variations of passages of Lorem Ipsum available</a></li>
+                    <li>- Ref 003: <a href="" class="hover:underline italic">reference There are many variations of passages of Lorem Ipsum available</a></li>
+                    <li>- Ref 004: <a href="" class="hover:underline italic">reference There are many variations of passages of Lorem Ipsum available</a></li>
+                    <li>- Ref 005: <a href="" class="hover:underline italic">reference There are many variations of passages of Lorem Ipsum available</a></li>
+                </ul>
             </div>
+
+            <div #section_05 class="my-8">
+                <h1 class="text-3xl mb-2">Postagens relacionadas</h1>
+                <ul>
+                    <li>- SQLite do Zero - part. 2: <a href="" class="hover:underline italic">Preparando o ambiente</a></li>
+                    <li>- SQLite do Zero - part. 3: <a href="" class="hover:underline italic">Quebrando a solução em partes</a></li>
+                    <li>- SQLite do Zero - part. 4: <a href="" class="hover:underline italic">Implementando a documentação</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sticky top-20 hidden xl:block lg:block w-64 h-fit xl:mr-16 lg:mr-16 mt-8 px-8 py-8 border-l">
+            <ul class="w-full flex flex-col">
+                <li class="text-sm cursor-pointer hover:underline p-1">- Apresentação</li>
+                <li class="text-sm cursor-pointer hover:underline p-1">- Documentação</li>
+                <li class="text-sm cursor-pointer hover:underline p-1">- Arquitetura</li>
+                <li class="text-sm cursor-pointer hover:underline p-1">- Referências</li>
+                <li class="text-sm cursor-pointer hover:underline p-1">- Postagens relacionadas</li>
+            </ul>
         </div>
     </div>
 </section>
+
+<app-back-scroll></app-back-scroll>
