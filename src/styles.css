@@ -13,6 +13,19 @@ body {
   background-color: var(--background-color);
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+router-outlet + * {
+  display: block;
+  animation: fade .7s;
+}
 
 /* Firefox */
 * {
