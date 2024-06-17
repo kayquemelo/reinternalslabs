@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardPost } from '../../interfaces/card-post';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './post.component.html',
   styleUrl: './post.component.css'
 })
-export class PostComponent {
+export class PostComponent implements OnInit {
 
   public readonly cardList: Array<CardPost> = [
     { id: "001", title: "SQLite do Zero - part. 1", subtitle: "Desenhando a arquitetura", date: "2024-06-02", author: "Kayque Melo" },
@@ -17,6 +17,10 @@ export class PostComponent {
   ];
 
   constructor(private _router: Router) {}
+
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
 
   public navigateToPost(id: string) {
     return this._router.navigate(['post', id])

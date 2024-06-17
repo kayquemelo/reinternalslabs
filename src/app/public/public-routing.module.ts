@@ -6,6 +6,7 @@ import { PostComponent } from './pages/post/post.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { AuthorComponent } from './pages/author/author.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthorDetailComponent } from './pages/author-detail/author-detail.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
         path: "author",
         title: "Autores | Reinternals LABs",
         component: AuthorComponent
+      },
+      {
+        path: "author/:id",
+        title: "Detalhes do autor | Reinternals LABs",
+        component: AuthorDetailComponent
       },
       {
         path: "ops/:id",

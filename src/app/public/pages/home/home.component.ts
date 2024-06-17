@@ -32,6 +32,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(private _router: Router) {  }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: "instant" });
+    
     this.subscriptions.add(
       this.getPseudoRandomBgImagePath().subscribe(index => {
         this.bgImage = this.bgImageList[index];

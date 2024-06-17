@@ -1,6 +1,40 @@
 <section class="min-h-screen">
     <div class="px-8 py-4 text-primary-color">
-        <h1 class="break-words text-4xl font-semibold text-center mt-4 mb-16">Postagens realizadas</h1>
+        <h1 class="break-words text-4xl font-semibold text-center mt-4 mb-8">Postagens realizadas</h1>
+        <div class="flex justify-center w-full mb-8">
+            <form class="w-full xl:mx-32 lg:mx-32 md:mx-4 mx-4">
+                <div class="flex">
+                    <button class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-background-color bg-primary-color border border-gray-300 rounded-s-lg hover:bg-secondary-color focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">Todas as categorias <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+                    </button>
+                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Mockups</button>
+                        </li>
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Templates</button>
+                        </li>
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Design</button>
+                        </li>
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Logos</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative w-full">
+                    <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-gray-500 focus:border-gray-500" placeholder="Pesquisar Anotações, tutoriais, pesquisas, projetos, etc..." required />
+                        <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-primary-color rounded-e-lg border border-gray-700 hover:bg-secondary-color focus:ring-4 focus:outline-none focus:ring-gray-300">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                            </svg>
+                            <span class="sr-only">Pesquisar</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="w-full xl:px-16 lg:px-16 px-4 grid lg:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-4">
             @for(card of cardList; track card) {
                 <div (click)="this.navigateToPost(card.id)" class="cursor-pointer text-primary-color flex flex-col w-full bg-background-color text-background-color min-h-48 rounded-md drop-shadow-md border p-4 flex justify-center items-center hover:bg-primary-color hover:text-background-color duration-300">

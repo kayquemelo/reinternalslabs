@@ -10,6 +10,7 @@ import { AuthorComponent } from './pages/author/author.component';
 import { PageDefaultComponent } from './components/page-default/page-default.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BackScrollComponent } from './components/back-scroll/back-scroll.component';
+import { AuthorDetailComponent } from './pages/author-detail/author-detail.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { BackScrollComponent } from './components/back-scroll/back-scroll.compon
     PageDefaultComponent,
     PageNotFoundComponent,
     BackScrollComponent,
+    AuthorDetailComponent,
   ],
   imports: [
     CommonModule,
