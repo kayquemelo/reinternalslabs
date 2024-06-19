@@ -16,7 +16,7 @@ export class MainComponent {
   public readonly menuList: Array<Menu> = [
     { id: "01",label: "Home",      route: "/home",   icon: "" },
     { id: "02",label: "Postagens", route: "/post",   icon: "" },
-    { id: "03",label: "Autores",   route: "/author", icon: "" },
+    // { id: "03",label: "Autores",   route: "/author", icon: "" },
     { id: "04",label: "Entrar",    route: "/login",  icon: "" }
   ]
 
