@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+  public readonly menuList: any
+
 }
