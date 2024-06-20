@@ -1,1 +1,23 @@
-<p>main works!</p>
+  <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-primary-color">
+        <a routerLink="/home" class="flex mb-4 items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Reinternals<b class="text-secondary-color hover:text-background-color duration-500">LABs</b></span>
+        </a>
+       <ul class="space-y-2 font-medium">
+          <li>
+             <a href="#" class="flex items-center p-2 text-background-color rounded-lg hover:bg-secondary-color group">
+                <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-background-color" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                   <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
+                   <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
+                </svg>
+                <span class="ms-3">Dashboard</span>
+             </a>
+          </li>
+       </ul>
+    </div>
+ </aside>
+ 
+ <div class="p-4 sm:ml-64">
+    <router-outlet></router-outlet>    
+ </div>
+ 
